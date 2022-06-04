@@ -12,8 +12,9 @@
 				"type": "AzureBlobFSLocation",
 				"fileSystem": "targetpopulation"
 			},
-			"columnDelimiter": ",",
+			"columnDelimiter": "\t",
 			"compressionCodec": "gzip",
+			"compressionLevel": "Optimal",
 			"escapeChar": "\\",
 			"quoteChar": "\""
 		},
