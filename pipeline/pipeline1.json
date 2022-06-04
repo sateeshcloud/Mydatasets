@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "mymetadata",
+				"name": "Get Metadata1",
 				"type": "GetMetadata",
 				"dependsOn": [
 					{
@@ -23,17 +23,17 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "source_population_data",
+						"referenceName": "source",
 						"type": "DatasetReference"
 					},
 					"fieldList": [
 						"columnCount",
 						"size",
-						"lastModified",
-						"itemType"
+						"lastModified"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -42,11 +42,11 @@
 				}
 			},
 			{
-				"name": "only 13 coloums",
+				"name": "If Condition1",
 				"type": "IfCondition",
 				"dependsOn": [
 					{
-						"activity": "mymetadata",
+						"activity": "Get Metadata1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -55,12 +55,12 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@equals(activity('mymetadata').output.columnCount,13)",
+						"value": "@equals(activity('Get Metadata1').output.columnCount,13)",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
 						{
-							"name": "blob to datalake_copy1",
+							"name": "blobtodatalake_copy1",
 							"type": "Copy",
 							"dependsOn": [],
 							"policy": {
@@ -106,13 +106,13 @@
 							},
 							"inputs": [
 								{
-									"referenceName": "source_population_data",
+									"referenceName": "source",
 									"type": "DatasetReference"
 								}
 							],
 							"outputs": [
 								{
-									"referenceName": "covid_datalake_target",
+									"referenceName": "target",
 									"type": "DatasetReference"
 								}
 							]
@@ -127,14 +127,34 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataset": {
-						"referenceName": "source_population_data",
+						"referenceName": "source",
 						"type": "DatasetReference"
 					},
-					"timeout": "0.00:02:00",
+					"timeout": "7.00:00:00",
 					"sleep": 10
+				}
+			},
+			{
+				"name": "Web1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://levelypedu.net",
+					"method": "POST",
+					"body": "dummy"
 				}
 			}
 		],
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2022-06-04T04:43:46Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
