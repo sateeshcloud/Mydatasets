@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": "sateeshcloud/azure4everyone-samples/blob/master/azure-data-factory-mapping-data-flows/movies.csv"
+				"relativeUrl": "sateeshcloud/Mydatasets/blob/main/movies.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
