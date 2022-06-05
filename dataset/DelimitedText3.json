@@ -10,6 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "movies.csv",
+				"folderPath": "sateeshcloud/Mydatasets/blob/main",
 				"container": "source"
 			},
 			"columnDelimiter": ",",
