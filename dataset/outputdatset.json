@@ -1,0 +1,24 @@
+{
+	"name": "outputdatset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "outputlinked",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "movies.csv",
+				"folderPath": "sateeshcloud/Mydatasets/blob/main",
+				"fileSystem": "output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
