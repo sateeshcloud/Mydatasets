@@ -1,0 +1,22 @@
+{
+	"name": "sampledataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "gitwebhttpdemo",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "sateeshcloud/Mydatasets/blob/main/movies.csv"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
