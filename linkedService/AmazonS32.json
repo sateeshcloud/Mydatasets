@@ -1,0 +1,14 @@
+{
+	"name": "AmazonS32",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AmazonS3",
+		"typeProperties": {
+			"serviceUrl": "https://s3.amazonaws.com",
+			"accessKeyId": "AKIAQMLI5KZMXUDNKJFX",
+			"authenticationType": "AccessKey",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDgwOTZDRTIyLUM5QUMtNEU2MC04RDRELTUyQ0Q4ODBBMTk0Ql80YWRjNjI2Yi02ZGFkLTQ3MWItODc0NC1hNTRmZTY1Y2E5YjciDQp9"
+		}
+	}
+}
