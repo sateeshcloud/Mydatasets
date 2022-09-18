@@ -1,0 +1,9 @@
+{
+	"name": "mywrokspacedemo",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cf5087eb-be58-4a86-a5f2-1a6d19f505b2",
+		"tenantId": "806d981e-b582-4a31-83ff-31c9bdc87fa6"
+	}
+}
