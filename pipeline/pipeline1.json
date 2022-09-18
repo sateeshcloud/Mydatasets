@@ -22,10 +22,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "source",
-						"type": "DatasetReference"
-					},
 					"fieldList": [
 						"columnCount",
 						"size",
@@ -94,28 +90,8 @@
 										"fileExtension": ".txt"
 									}
 								},
-								"enableStaging": false,
-								"translator": {
-									"type": "TabularTranslator",
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
-								}
-							},
-							"inputs": [
-								{
-									"referenceName": "source",
-									"type": "DatasetReference"
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "target",
-									"type": "DatasetReference"
-								}
-							]
+								"enableStaging": false
+							}
 						}
 					]
 				}
@@ -126,10 +102,6 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
-					"dataset": {
-						"referenceName": "source",
-						"type": "DatasetReference"
-					},
 					"timeout": "7.00:00:00",
 					"sleep": 10
 				}
